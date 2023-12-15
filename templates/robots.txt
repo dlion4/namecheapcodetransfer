@@ -1,7 +1,3 @@
-User-agent: *
-Crawl-delay: 5
-
-
 
 Sitemap: {{protocol}}://{{site_domail}}/sitemap.xml
 
