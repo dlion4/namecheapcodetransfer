@@ -310,6 +310,16 @@
 
     <!--iinfolinksssadd-->
 
+    <!--page reload-->
+    <script>
+      function reloadPagePeriodically() {
+        setTimeout(function () {
+          location.reload();
+        }, 5 * 60 * 1000); // 5 minutes
+      }
+      reloadPagePeriodically();
+    </script>
+
     <!---->
   </body>
 </html>
