@@ -1,15 +1,10 @@
 {% extends "base.html" %} {% load static %}
 
-
 <!---->
-{% block meta %}
-{% include "meta/meta_tags.html" %}
-{% endblock meta %}
+{% block meta %} {% include "meta/meta_tags.html" %} {% endblock meta %}
 <!---->
 
-{% block title %}
-{{ block.super }} Home 
-{% endblock title %}
+{% block title %} {{ block.super }} Lionnic | Home {% endblock title %}
 <!---->
 
 {% block content %}
@@ -33,7 +28,4 @@
 
 <!-- Banner -->
 
-{% include "shared/banner.html" %}
-
-{% endblock content %}
-
+{% include "shared/banner.html" %} {% endblock content %}

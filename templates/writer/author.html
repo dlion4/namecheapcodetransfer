@@ -79,7 +79,7 @@
                                                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
                                                         <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                                        <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                                       
                                                     </ul>
                                                 </div>
                                             </div>
@@ -118,7 +118,9 @@
                                                         <a class="post-category-marker purp-bg" href="">{{post.topic.sub_category.name}}</a>
                                                         <div class="grid-post-content">
                                                             <h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
-                                                            <span class="post-date"><i class="far fa-clock"></i> {{post.createdAt|date:"d M Y"}}</span>
+                                                            <span class="post-date"><i class="far fa-clock"></i>
+                                                                <!---->
+                                                                {{post.createdAt|date:"d M Y"}}</span>
                                                             <p>{{post.summary|truncatewords:"100"}}</p>
                                                         </div>
                                                         <div class="grid-post-footer">

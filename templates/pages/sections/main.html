@@ -59,7 +59,7 @@
                   ><i class="fas fa-search"></i
                 ></a>
                 <span class="post-media_title pmd_vis"
-                  >© This image is subjected to copyright</span
+                  >Lionnic © This image is subjected to copyright</span
                 >
               </div>
               {% endfor %}
@@ -78,7 +78,7 @@
                   ><i class="fas fa-search"></i
                 ></a>
                 <span class="post-media_title pmd_vis"
-                  >© This image is subjected to copyright</span
+                  >Lionnic © This image is subjected to copyright</span
                 >
               </div>
             </div>
@@ -222,19 +222,30 @@
           <div class="profile-card-social">
             <ul>
               <li>
-                <a href="#" target="_blank"
+                <a
+                  href="https://www.facebook.com/profile.php?id=61552059008878"
+                  target="_blank"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
               </li>
               <li>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/lionnic_X" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
               </li>
               <li>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a
+                  href="https://www.instagram.com/lionnic_updates/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </li>
-              <li>
-                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-              </li>
+              <!--
+
+                <li>
+                  <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+              -->
             </ul>
           </div>
         </div>
@@ -265,7 +276,7 @@
                   </div>
                 </a>
                 <span class="post-media_title"
-                  >&copy; This image is subjected to copyright</span
+                  >Lionnic &copy; This image is subjected to copyright</span
                 >
               </div>
               <div class="list-post-content">
@@ -460,8 +471,9 @@
                         <li><span>By {{post.writer.username}}</span></li>
                         <li>
                           <span
-                            ><i class="far fa-clock"></i
-                            >{{post.createdAt|date:"d M Y"}}</span
+                            ><i class="far fa-clock"></i>
+                            <!---->
+                            {{post.createdAt|date:"d M Y"}}</span
                           >
                         </li>
                         <li>
@@ -506,8 +518,9 @@
                         <li><span>By {{post.writer.username}}</span></li>
                         <li>
                           <span
-                            ><i class="far fa-clock"></i
-                            >{{post.createdAt|date:"d M Y"}}</span
+                            ><i class="far fa-clock"></i>
+                            <!---->
+                            {{post.createdAt|date:"d M Y"}}</span
                           >
                         </li>
                         <li>
@@ -570,18 +583,27 @@
         <div class="social-widget">
           <a href="{{site_social_fab}}" target="_blank" class="facebook-soc">
             <i class="fab fa-facebook-f"></i>
-            <span class="soc-widget-title">Likes</span>
-            <span class="soc-widget_counter">1200+</span>
+            <!--
+
+              <span class="soc-widget-title">Likes</span>
+              <span class="soc-widget_counter">1200+</span>
+            -->
           </a>
           <a href="{{site_social_twitter}}" target="_blank" class="twitter-soc">
             <i class="fab fa-twitter"></i>
-            <span class="soc-widget-title">Followers</span>
-            <span class="soc-widget_counter">1400+</span>
+            <!--
+
+              <span class="soc-widget-title">Followers</span>
+              <span class="soc-widget_counter">1000+</span>
+            -->
           </a>
           <a href="{{site_social_youtube}}" target="_blank" class="youtube-soc">
             <i class="fab fa-youtube"></i>
-            <span class="soc-widget-title">Followers</span>
-            <span class="soc-widget_counter">956+</span>
+            <!--
+
+              <span class="soc-widget-title">Followers</span>
+              <span class="soc-widget_counter">956+</span>
+            -->
           </a>
           <a
             href="{{site_social_instagram}}"
@@ -589,8 +611,11 @@
             class="instagram-soc"
           >
             <i class="fab fa-instagram"></i>
-            <span class="soc-widget-title">Followers</span>
-            <span class="soc-widget_counter">1600+</span>
+            <!--
+              
+              <span class="soc-widget-title">Followers</span>
+              <span class="soc-widget_counter">1600+</span>
+            -->
           </a>
         </div>
       </div>

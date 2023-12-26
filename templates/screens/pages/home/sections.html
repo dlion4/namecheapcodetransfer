@@ -9,7 +9,7 @@
 
           <div class="section-title sect_dec">
             <h2>Top Stories</h2>
-            <h4>Don't miss daily news</h4>
+            <h4>Don't Miss our Daily Updates</h4>
           </div>
           <div class="grid-post-wrap">
             {% if top_story %}
@@ -34,7 +34,8 @@
                           </div>
                         </a>
                         <span class="post-media_title"
-                          >&copy; This image is subjected to copyright</span
+                          >Lionnic &copy; This image is subjected to
+                          copyright</span
                         >
                       </div>
                       <div class="list-post-content">
@@ -48,6 +49,15 @@
                           <!---->
                           {{post.createdAt|date:"d M Y"}}</span
                         >
+                        <!---->
+                        <ul class="post-opt">
+                          <li>
+                            <i class="far fa-comments-alt"></i>
+                            {{post.comments}}
+                          </li>
+
+                          <li><i class="fal fa-eye"></i> {{post.views}}</li>
+                        </ul>
                       </div>
                     </div>
                     <!--list-post end-->
@@ -79,7 +89,7 @@
                                 src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
                                 alt=""
                               />
-                              <span>By Dan Delion</span></a
+                              <span>By Milimo Lion</span></a
                             >
                           </div>
                           <div class="grid-post-media_title">
@@ -159,8 +169,9 @@
                               <li><span>By {{post.writer.username}}</span></li>
                               <li>
                                 <span
-                                  ><i class="far fa-clock"></i
-                                  >{{post.createdAt|date:"d M Y"}}</span
+                                  ><i class="far fa-clock"></i>
+                                  <!---->
+                                  {{post.createdAt|date:"d M Y"}}</span
                                 >
                               </li>
                               <li>
@@ -207,8 +218,9 @@
                             <ul class="pwic_opt">
                               <li>
                                 <span
-                                  ><i class="far fa-clock"></i
-                                  >{{post.createdAt|date:"d M Y"}}</span
+                                  ><i class="far fa-clock"></i>
+                                  <!---->
+                                  {{post.createdAt|date:"d M Y"}}</span
                                 >
                               </li>
                               <li>
@@ -258,8 +270,11 @@
                   class="facebook-soc"
                 >
                   <i class="fab fa-facebook-f"></i>
-                  <span class="soc-widget-title">Likes</span>
-                  <span class="soc-widget_counter">1200+</span>
+                  <!--
+
+                    <span class="soc-widget-title">Likes</span>
+                    <span class="soc-widget_counter">1200+</span>
+                  -->
                 </a>
                 <a
                   href="{{site_social_twitter}}"
@@ -267,8 +282,9 @@
                   class="twitter-soc"
                 >
                   <i class="fab fa-twitter"></i>
-                  <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1400+</span>
+
+                  {% comment %} <span class="soc-widget-title">Followers</span>
+                  <span class="soc-widget_counter">1400+</span> {% endcomment %}
                 </a>
                 <a
                   href="{{site_social_youtube}}"
@@ -276,8 +292,8 @@
                   class="youtube-soc"
                 >
                   <i class="fab fa-youtube"></i>
-                  <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1100+</span>
+                  {% comment %} <span class="soc-widget-title">Followers</span>
+                  <span class="soc-widget_counter">1100+</span> {% endcomment %}
                 </a>
                 <a
                   href="{{site_social_instagram}}"
@@ -285,8 +301,8 @@
                   class="instagram-soc"
                 >
                   <i class="fab fa-instagram"></i>
-                  <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1600+</span>
+                  {% comment %} <span class="soc-widget-title">Followers</span>
+                  <span class="soc-widget_counter">1600+</span> {% endcomment %}
                 </a>
               </div>
             </div>
