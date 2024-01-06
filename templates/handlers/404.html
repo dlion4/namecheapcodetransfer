@@ -1,26 +1,42 @@
 {% extends "base.html" %} {% load static %}
 <!---->
 
-{% block content %} 
- <!--section   -->
- <section class="hero-section error-section">
-    <div class="bg-wrap hero-section_bg">
-        <div class="bg" data-bg="{% static 'images/bg/globall.jpg' %}"></div>
+{% block content %}
+<!--section   -->
+<section class="hero-section error-section">
+  <div class="bg-wrap hero-section_bg">
+    <div class="bg" data-bg="{% static 'images/bg/globall.jpg' %}"></div>
+  </div>
+  <div class="container">
+    <div class="error-wrap">
+      <h2>404</h2>
+      <p>We're sorry, but the Page you were looking for, couldn't be found.</p>
+      <div class="clearfix"></div>
+      <form action="#" class="custom-form">
+        <input
+          name="se"
+          id="se2"
+          type="text"
+          class="search"
+          placeholder="Search.."
+          value="Search..."
+        />
+        <button
+          title="search"
+          type="submit"
+          class="search-submit color-bg"
+          id="submit_btn2"
+        >
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <div class="clearfix"></div>
+      <p>Or</p>
+      <a href="{% url 'posts:home' %}" class="btn color-btn flat-btn">
+        <span>Back to Home Page</span> <i class="fas fa-caret-right"></i
+      ></a>
     </div>
-    <div class="container">
-        <div class="error-wrap">
-            <h2>404</h2>
-            <p>We're sorry, but the Page you were looking for, couldn't be found.</p>
-            <div class="clearfix"></div>
-            <form action="#" class="custom-form">
-                <input name="se" id="se2" type="text" class="search" placeholder="Search.." value="Search...">
-                <button title="search" type="submit" class="search-submit color-bg" id="submit_btn2"><i class="fa fa-search"></i> </button>
-            </form>
-            <div class="clearfix"></div>
-            <p>Or</p>
-            <a href="{% url 'posts:home' %}" class="btn color-btn flat-btn"> <span>Back to Home Page</span> <i class="fas fa-caret-right"></i></a>
-        </div>
-    </div>
+  </div>
 </section>
 <!-- section end  -->
 

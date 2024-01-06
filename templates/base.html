@@ -47,25 +47,21 @@
     <!--monetag adsformat-->
 
     <script>
-      setTimeout(function () {
-        (function (d, z, s) {
-          s.src = "https://" + d + "/401/" + z;
-          try {
-            (document.body || document.documentElement).appendChild(s);
-          } catch (e) {}
-        })("goomaphy.com", 6646197, document.createElement("script"));
-      }, 10000);
+      (function (d, z, s) {
+        s.src = "https://" + d + "/401/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("goomaphy.com", 6646197, document.createElement("script"));
     </script>
 
     <script>
-      setTimeout(function () {
-        (function (d, z, s) {
-          s.src = "https://" + d + "/401/" + z;
-          try {
-            (document.body || document.documentElement).appendChild(s);
-          } catch (e) {}
-        })("gloaphoo.net", 6646106, document.createElement("script"));
-      }, 13000);
+      (function (d, z, s) {
+        s.src = "https://" + d + "/401/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("gloaphoo.net", 6646106, document.createElement("script"));
     </script>
 
     <script
@@ -76,14 +72,12 @@
     ></script>
 
     <script>
-      setTimeout(function () {
-        (function (d, z, s) {
-          s.src = "https://" + d + "/401/" + z;
-          try {
-            (document.body || document.documentElement).appendChild(s);
-          } catch (e) {}
-        })("aistekso.net", 6622888, document.createElement("script"));
-      }, 16000);
+      (function (d, z, s) {
+        s.src = "https://" + d + "/401/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("aistekso.net", 6622888, document.createElement("script"));
     </script>
 
     <script
@@ -96,14 +90,12 @@
     <!--xx etra-->
 
     <script>
-      setTimeout(function () {
-        (function (d, z, s) {
-          s.src = "https://" + d + "/400/" + z;
-          try {
-            (document.body || document.documentElement).appendChild(s);
-          } catch (e) {}
-        })("jodseeck.net", 6622883, document.createElement("script"));
-      }, 18000);
+      (function (d, z, s) {
+        s.src = "https://" + d + "/400/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("jodseeck.net", 6622883, document.createElement("script"));
     </script>
     <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
     <!--addddsensee
@@ -224,44 +216,42 @@
       <!-- cookie-info-bar end -->
 
       <script>
-        setTimeout(function () {
-          // Check if the user has already seen the notification by looking for a cookie
-          function hasCookieConsent() {
-            return document.cookie.indexOf("cookieConsent=true") !== -1;
+        // Check if the user has already seen the notification by looking for a cookie
+        function hasCookieConsent() {
+          return document.cookie.indexOf("cookieConsent=true") !== -1;
+        }
+
+        // Function to set a cookie that indicates the user has accepted the cookies
+        function setCookieConsent() {
+          var expirationDate = new Date();
+          expirationDate.setFullYear(expirationDate.getFullYear() + 5); // Cookie valid for 1 year
+          document.cookie =
+            "cookieConsent=true; expires=" +
+            expirationDate.toUTCString() +
+            "; path=/";
+        }
+
+        // Show the cookie notification only if the user hasn't seen it before
+        if (!hasCookieConsent()) {
+          var cookieInfoBar = document.getElementById("cookie-info-bar");
+          var acceptCookieButton = document.getElementById("accept-cookie");
+          var rejectCookieButton = document.getElementById("reject-cookie");
+
+          if (cookieInfoBar && acceptCookieButton && rejectCookieButton) {
+            cookieInfoBar.style.display = "block";
+
+            acceptCookieButton.addEventListener("click", function () {
+              setCookieConsent();
+              cookieInfoBar.style.display = "none";
+              // You can add code here to handle cookie acceptance
+            });
+
+            rejectCookieButton.addEventListener("click", function () {
+              cookieInfoBar.style.display = "none";
+              // You can add code here to handle cookie rejection
+            });
           }
-
-          // Function to set a cookie that indicates the user has accepted the cookies
-          function setCookieConsent() {
-            var expirationDate = new Date();
-            expirationDate.setFullYear(expirationDate.getFullYear() + 5); // Cookie valid for 1 year
-            document.cookie =
-              "cookieConsent=true; expires=" +
-              expirationDate.toUTCString() +
-              "; path=/";
-          }
-
-          // Show the cookie notification only if the user hasn't seen it before
-          if (!hasCookieConsent()) {
-            var cookieInfoBar = document.getElementById("cookie-info-bar");
-            var acceptCookieButton = document.getElementById("accept-cookie");
-            var rejectCookieButton = document.getElementById("reject-cookie");
-
-            if (cookieInfoBar && acceptCookieButton && rejectCookieButton) {
-              cookieInfoBar.style.display = "block";
-
-              acceptCookieButton.addEventListener("click", function () {
-                setCookieConsent();
-                cookieInfoBar.style.display = "none";
-                // You can add code here to handle cookie acceptance
-              });
-
-              rejectCookieButton.addEventListener("click", function () {
-                cookieInfoBar.style.display = "none";
-                // You can add code here to handle cookie rejection
-              });
-            }
-          }
-        }, 8000);
+        }
       </script>
     </div>
     <!--=============== scripts  ===============-->
@@ -273,16 +263,14 @@
     {% endcomment %}
 
     <script>
-      setTimeout(function () {
-        const isNoticeSeen = window.localStorage["noticeSeen"] === "true";
-        if (isNoticeSeen) {
-          $(".cookie-info-bar").css("display", "none");
-        } else {
-          $(".sicb_btn").click(function () {
-            window.localStorage["noticeSeen"] = true;
-          });
-        }
-      }, 10000);
+      const isNoticeSeen = window.localStorage["noticeSeen"] === "true";
+      if (isNoticeSeen) {
+        $(".cookie-info-bar").css("display", "none");
+      } else {
+        $(".sicb_btn").click(function () {
+          window.localStorage["noticeSeen"] = true;
+        });
+      }
     </script>
 
     <script>
@@ -312,15 +300,23 @@
 
     <!--iinfolinksssadd-->
 
-    <!--page reload-->
-    <script>
-      function reloadPagePeriodically() {
-        setTimeout(function () {
-          location.reload();
-        }, 5 * 60 * 1000); // 5 minutes
-      }
-      reloadPagePeriodically();
-    </script>
+    <!--page reload
+      <script>
+        function reloadPagePeriodically() {
+          setTimeout(function () {
+            location.reload();
+          }, 5 * 60 * 1000); // 5 minutes
+        }
+        reloadPagePeriodically();
+      </script>
+    -->
+
+    <!--
+
+ads blocker
+
+      
+    -->
 
     <!---->
   </body>
