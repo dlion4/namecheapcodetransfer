@@ -125,7 +125,6 @@
       </div>
       {% if request.user.is_authenticated %}
       <a href="{% url 'dashboard:home' %}" class="srf_btn htact show-reg-form">
-        <i class="fal fa-user"></i>
         <span class="header-tooltip">Dashboard</span>
       </a>
       {% else %}
@@ -133,7 +132,7 @@
         href="{% url 'dashboard:auth:login' %}"
         class="srf_btn htact show-reg-form"
       >
-        <i class="fal fa-user"></i> <span class="header-tooltip">Sign In</span>
+        <span class="header-tooltip">Sign In</span>
       </a>
 
       {% endif %}
