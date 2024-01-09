@@ -3,134 +3,90 @@
     href="https://api.whatsapp.com/send?text={{post.title}}%0A{{protocol}}://{{site_domain}}{{post.get_absolute_url}}%0A{{post.image.url}}"
     target="_blank"
     class="pop share-icon"
-    ><i class="fab fa-whatsapp"></i>
+  >
+    <i class="fab fa-whatsapp"></i>
   </a>
+
   <a
     href="https://www.linkedin.com/shareArticle?mini=true&title={{post.title}}&url={{protocol}}://{{site_domain}}{{post.get_absolute_url}}&media={{post.image.url}}&description="
     target="_blank"
     class="pop share-icon"
-    ><i class="fab fa-linkedin"></i>
+  >
+    <i class="fab fa-linkedin"></i>
   </a>
-
-  <script>
-    function shareToFacebook() {
-      var postTitle = encodeURIComponent("{{post.title}}");
-      var postSummary = encodeURIComponent("{{post.summary}}");
-      var postUrl = encodeURIComponent(
-        "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}"
-      );
-      var postImageUrl = encodeURIComponent("{{post.image.url}}");
-
-      var facebookShareUrl =
-        "https://www.facebook.com/sharer/sharer.php?u=" + postUrl;
-
-      // Open the Facebook sharing dialog in a new window
-      window.open(facebookShareUrl, "_blank", "width=600,height=400");
-
-      console.log(
-        "Shared to Facebook:",
-        postTitle,
-        postSummary,
-        postUrl,
-        postImageUrl
-      );
-    }
-  </script>
 
   <a onclick="shareToFacebook()" class="pop share-icon">
     <i class="fab fa-facebook"></i>
   </a>
 
-  {% comment %} twiter {% endcomment %}
-
-  <script>
-    function shareToTwitterWithImage() {
-      var postTitle = encodeURIComponent("{{post.title}}");
-      var postSummary = encodeURIComponent("{{post.summary}}");
-      var postUrl = encodeURIComponent(
-        "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}"
-      );
-      var postImageUrl = encodeURIComponent("{{post.image.url}}");
-
-      // URL to the image you want to attach
-      var imageToAttach = encodeURIComponent("URL_OF_YOUR_IMAGE");
-
-      var twitterShareUrl =
-        "https://twitter.com/intent/tweet?text=" +
-        postTitle +
-        "&url=" +
-        postUrl +
-        "&media=" +
-        imageToAttach;
-
-      // Open the Twitter sharing dialog in a new window
-      window.open(twitterShareUrl, "_blank", "width=600,height=400");
-
-      console.log(
-        "Shared to Twitter with Image:",
-        postTitle,
-        postSummary,
-        postUrl,
-        postImageUrl
-      );
-    }
-  </script>
-
   <a onclick="shareToTwitterWithImage()" class="pop share-icon">
     <i class="fab fa-twitter"></i>
   </a>
 
-  <!--
-  <a
-      href="https://newzfoxupdates.quora.com/compose?ch=2&share=={{post.title}}%0A{{protocol}}://{{site_domain}}{{post.get_absolute_url}}%0A{{post.image.url}}"
-      target="_blank"
-      class "pop share-icon"
-      ><i class="fab fa-quora"></i>
-  </a>
-
--->
   <a
     href="https://pinterest.com/pin/create/button/?url={{protocol}}://{{site_domain}}{{post.get_absolute_url}}&media={{post.image.url}}&description={{post.title}}"
     target="_blank"
     class="pop share-icon"
-    ><i class="fab fa-pinterest"></i>
+  >
+    <i class="fab fa-pinterest"></i>
   </a>
+
   <a
     href="https://www.quora.com/profile/Newzfox-Updates/?url={{post.title}}%0A{{protocol}}://{{site_domain}}{{post.get_absolute_url}}%0A{{post.image.url}}"
     target="_blank"
     class="pop share-icon"
-    ><i class="fab fa-quora"></i>
-</a>
-    <script>
-      function copyTitleUrlImageToClipboard() {
-        var postTitle = "{{post.title}}";
-        var postUrl = "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}";
-        var postImageUrl = "{{post.image.url}}";
+  >
+    <i class="fab fa-quora"></i>
+  </a>
 
-        // Combine the title, URL, and image URL with line breaks
-        var clipboardContent = postTitle + "\n" + postUrl + "\n" + postImageUrl;
-
-        // Create a temporary text area element
-        var textField = document.createElement("textarea");
-        textField.value = clipboardContent;
-        document.body.appendChild(textField);
-        textField.select();
-
-        try {
-          // Copy the content to the clipboard
-          document.execCommand("copy");
-          console.log("Copied to clipboard:", clipboardContent);
-        } catch (err) {
-          console.error("Unable to copy to clipboard");
-        }
-
-        // Remove the temporary text area element
-        textField.remove();
-      }
-    </script>
-
-    <a onclick="copyTitleUrlImageToClipboard()" class="pop share-icon">
-      <i class="fas fa-clipboard"></i>
-    </a>
+  <a onclick="copyTitleUrlImageToClipboard()" class="pop share-icon">
+    <i class="fas fa-clipboard"></i>
   </a>
 </div>
+
+<script>
+  function shareToFacebook() {
+    var postTitle = encodeURIComponent("{{post.title}}");
+    var postUrl = encodeURIComponent(
+      "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}"
+    );
+
+    var facebookShareUrl =
+      "https://www.facebook.com/sharer/sharer.php?u=" + postUrl;
+
+    window.open(facebookShareUrl, "_blank", "width=600,height=400");
+  }
+
+  function shareToTwitterWithImage() {
+    var postTitle = encodeURIComponent("{{post.title}}");
+    var postUrl = encodeURIComponent(
+      "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}"
+    );
+
+    var twitterShareUrl =
+      "https://twitter.com/intent/tweet?text=" + postTitle + "&url=" + postUrl;
+
+    window.open(twitterShareUrl, "_blank", "width=600,height=400");
+  }
+
+  function copyTitleUrlImageToClipboard() {
+    var postTitle = "{{post.title}}";
+    var postUrl = "{{protocol}}://{{site_domain}}{{post.get_absolute_url}}";
+    var postImageUrl = "{{post.image.url}}";
+
+    var clipboardContent = postTitle + "\n" + postUrl + "\n" + postImageUrl;
+
+    var textField = document.createElement("textarea");
+    textField.value = clipboardContent;
+    document.body.appendChild(textField);
+    textField.select();
+
+    try {
+      document.execCommand("copy");
+    } catch (err) {
+      console.error("Unable to copy to clipboard");
+    }
+
+    textField.remove();
+  }
+</script>
