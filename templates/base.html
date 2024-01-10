@@ -192,12 +192,12 @@
             </li>
             <li>
               <a href="{% url 'posts:posts' %}"
-                ><i class="far fa-tennis-ball"></i><span>Foods</span></a
+                ><i class="far fa-tennis-ball"></i><span>Pets</span></a
               >
             </li>
             <li>
               <a href="{% url 'posts:posts' %}"
-                ><i class="far fa-flask"></i><span>Fitness</span></a
+                ><i class="far fa-flask"></i><span>Premium</span></a
               >
             </li>
           </ul>
@@ -210,7 +210,7 @@
       <div class="cookie-info-bar">
         <div class="container">
           <div class="cookie-info-bar_title">
-            <i class="fal fa-cookie"></i>Our site uses cookies to improve our
+            <i class="fal fa-cookie"></i>Lionnic uses cookies to improve our
             services. Learn more about our use of cookies:
             <a href="{% url 'privacy' %}">Cookie policy</a>
           </div>
@@ -219,7 +219,6 @@
         </div>
       </div>
       <!-- cookie-info-bar end -->
-
       <script>
         // Check if the user has already seen the notification by looking for a cookie
         function hasCookieConsent() {
@@ -319,10 +318,19 @@
     <!--
 
 ads blocker
+  
 
-      
-    -->
-
-    <!---->
+  <!--notixxx-->
+    <script id="script">
+      var s = document.createElement("script");
+      s.src = "https://notix.io/ent/current/enot.min.js";
+      s.onload = function (sdk) {
+        sdk.startInstall({
+          appId: "100690de4659ed21b79257ff57d47f8",
+          loadSettings: true,
+        });
+      };
+      document.head.append(s);
+    </script>
   </body>
 </html>
