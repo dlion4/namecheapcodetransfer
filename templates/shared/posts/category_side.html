@@ -1,45 +1,100 @@
 {% load static %}
+<style>
+  .categories_nav-inner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Arrange items vertically */
+    display: block;
+  }
+
+  .categories_nav-inner li {
+    margin-bottom: 10px;
+    /* Ensure each item takes the full width */
+    width: 100%;
+  }
+
+  .categories_nav-inner a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db; /* Blue background color */
+    transition: background-color 0.3s ease;
+  }
+
+  .categories_nav-inner a:hover {
+    background-color: #e67e22; /* Orange hover effect */
+  }
+
+  /* Adjust nested lists for better block-style layout */
+  .categories_nav-inner ul ul {
+    margin-top: 10px;
+    margin-left: 0; /* Remove horizontal margin for nested lists */
+  }
+</style>
 
 <div class="col-md-3">
   <div class="left_fix-bar fl-wrap">
-    <div class="categories_nav fl-wrap">
-      <!-- nav -->
-      <nav class="categories_nav-inner" id="menu2">
-        {% if nav_categories %}
-        <ul>
-          <li>
-            <a href="#" class="act-category"></i> All Posts</a>
-          </li>
-          {% for category in nav_categories %}
-          <li>
-            <a href="#">{{category.name|upper}}</a>
+    <div class="categories-container">
+      <div class="categories_nav fl-wrap">
+        <!-- nav -->
+        <nav class="categories_nav-inner" id="menu2">
+          {% if nav_categories %}
+          <ul>
+            <li><a href="#" class="act-category"> All News</a></li>
+            {% for category in nav_categories %}
+            <li>
+              <a href="#"> {{category.name|upper}}</a>
 
-            <!--level 2 -->
-            {% if category.get_sub_categories %}
-            <ul>
-              {% for sub in category.get_sub_categories %}
-              <li><a href="{{sub.get_absolute_url}}">{{sub.name|upper}}</a></li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-            <!--level 2 end -->
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </nav>
-      <!-- nav end-->
+              <!--level 2 -->
+              {% if category.get_sub_categories %}
+              <ul>
+                {% for sub in category.get_sub_categories %}
+                <li><a href="{{sub.get_absolute_url}}">{{sub.name|upper}}</a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              <!--level 2 end -->
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </nav>
+        <!-- nav end-->
+      </div>
     </div>
+
+    <br />
+    <br />
     <div class="box-widget-content">
       <div class="banner-widget fl-wrap">
         <div class="bg-wrap bg-parallax-wrap-gradien">
           <div class="bg" data-bg="{% static 'images/bg/newssa.jpg' %}"></div>
         </div>
-        <!-- <div class="banner-widget_content">
-                    <h5>Visit our awesome merch and souvenir online shop.</h5>
-                    <a href="#" class="btn float-btn color-bg small-btn">Our shop</a>
-                </div> -->
+        <div class="banner-widget_content">
+          <!-- Uncomment or remove this section based on your needs -->
+          <!--
+          <h5>Visit our awesome merch and souvenir online shop.</h5>
+          <a href="#" class="btn float-btn color-bg small-btn">Our shop</a>
+          -->
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  });
+</script>

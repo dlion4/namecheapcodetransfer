@@ -1172,7 +1172,6 @@ section {
   height: 1px;
 }
 .sect_dec:after {
-  
   position: absolute;
   right: 20px;
   top: 30px;
@@ -1357,11 +1356,11 @@ section {
   left: 50%;
   top: 6px;
   margin-left: -1px;
-  width: 3px;
-  height: 3px;
+  width: 7px;
+  height: 7px;
   border-radius: 25%;
   animation-name: scroll;
-  animation-duration: 2.2s;
+  animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
   animation-iteration-count: infinite;
 }
@@ -1759,7 +1758,6 @@ section {
   font-weight: 600;
 }
 .footer-list li:before {
-  
   position: absolute;
   left: 0;
   top: 5px;
@@ -3317,7 +3315,6 @@ section {
   color: #fff;
 }
 .categories_nav-inner .submen-dec:before {
-  
   position: absolute;
   right: 20px;
   width: 10px;
@@ -5308,7 +5305,7 @@ h4.cart-title span {
     right: 18px;
     top: 12px;
   }
-  
+
   .menusb a {
     float: left;
     width: 100%;

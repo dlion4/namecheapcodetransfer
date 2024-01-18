@@ -1,58 +1,39 @@
-{% extends "base.html" %} {% load static %}
-
-
-
-{% include "meta/meta_tags2.html" %}
-
-
+{% extends "base.html" %} {% load static %} {% include "meta/meta_tags2.html" %}
 
 <!---->
-{% block title %}
-{{ block.super }} Articles
-{% endblock title %}
+{% block title %} {{ block.super }} Articles {% endblock title %}
 <!---->
 
 {% block content %}
- 
- 
- <!--section   -->
- <section class="hero-section">
-    <div class="bg-wrap hero-section_bg">
-        <div class="bg" data-bg="{% static 'images/bg/newspa.jpg' %}"></div>
+
+<!--section   -->
+<section class="hero-section">
+  <div class="bg-wrap hero-section_bg">
+    <div class="bg" data-bg="{% static 'images/bg/newspa.jpg' %}"></div>
+  </div>
+  <div class="container">
+    <div class="hero-section_title">
+      <h2>Articles</h2>
     </div>
-    <div class="container">
-        <div class="hero-section_title">
-            <h2>Articles</h2>
-        </div>
-        <div class="clearfix"></div>
-        <div class="breadcrumbs-list fl-wrap">
-            <a href="{% url  'posts:home' %}">Home</a> <span>Blog</span>
-        </div>
-        <div class="scroll-down-wrap scw_transparent">
-            <div class="mousey">
-                <div class="scroller"></div>
-            </div>
-            <span>Scroll Down To Discover</span>
-        </div>
+    <div class="clearfix"></div>
+    <div class="breadcrumbs-list fl-wrap"><a href="{% url  'posts:home' %}">Home</a> <span>Blog</span></div>
+    <div class="scroll-down-wrap scw_transparent">
+      <div class="mousey">
+        <div class="scroller"></div>
+      </div>
+      <span>Scroll Down To Discover</span>
     </div>
+  </div>
 </section>
 <!-- section end  -->
 
-
-
 <section>
-    <div class="container">
-        <div class="row">
-        {% include  "shared/posts/category_side.html" %}
-        {% include  "shared/posts/posts_middle.html" %}
-        {% include  "shared/posts/posts_right.html" %}
-        </div>
-        <div class="limit-box fl-wrap"></div>
-    </div>
+  <div class="container">
+    <div class="row">{% include "shared/posts/category_side.html" %} {% include "shared/posts/posts_middle.html" %} {% include "shared/posts/posts_right.html" %}</div>
+    <div class="limit-box fl-wrap"></div>
+  </div>
 </section>
 
 <!-- Banner -->
 
-{% include "shared/banner.html" %}
-
-{% endblock content %}
+{% include "shared/banner.html" %} {% endblock content %}
