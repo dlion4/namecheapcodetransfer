@@ -4,35 +4,25 @@
   <div class="container">
     <div class="section-title sect_dec">
       <h2>Best In Categories</h2>
-      <h4>Don't miss daily news</h4>
     </div>
     <div class="row">
       <div class="col-md-5">
         {% if best_post %}
-        <div
-          class="list-post-wrap list-post-wrap_column list-post-wrap_column_fw"
-        >
+        <div class="list-post-wrap list-post-wrap_column list-post-wrap_column_fw">
           <!--list-post-->
           <div class="list-post fl-wrap">
             <a class="post-category-marker" href="#">{{best_post.category}}</a>
             <div class="list-post-media">
               <a href="{{best_post.get_absolute_url}}">
                 <div class="bg-wrap">
-                  <div
-                    class="bg"
-                    data-bg="{% if best_post.bg_image %}{{best_post.bg_image.url}}{% else %}{{best_post.image.url}}{% endif %}"
-                  ></div>
+                  <div class="bg" data-bg="{% if best_post.bg_image %}{{best_post.bg_image.url}}{% else %}{{best_post.image.url}}{% endif %}"></div>
                 </div>
               </a>
-              <span class="post-media_title"
-                >Lionnic &copy; This image is subjected to copyright</span
-              >
+              <span class="post-media_title">Lionnic &copy; This image is subjected to copyright</span>
             </div>
             <div class="list-post-content">
               <h3>
-                <a href="{{best_post.get_absolute_url}}"
-                  >{{best_post.title|truncatewords:"20"}}
-                </a>
+                <a href="{{best_post.get_absolute_url}}">{{best_post.title|truncatewords:"20"}} </a>
               </h3>
               <span class="post-date"
                 ><i class="far fa-clock"></i>
@@ -41,17 +31,12 @@
               >
               <p>{{best_post.summary|truncatewords:"60"}}</p>
               <ul class="post-opt">
-                <li>
-                  <i class="far fa-comments-alt"></i> {{best_post.comments}}
-                </li>
+                <li><i class="fas fa-comments"></i> {{best_post.comments}}</li>
                 <li><i class="fal fa-eye"></i> {{best_post.views}}</li>
               </ul>
               <div class="author-link">
                 <a href="{{ best_post.writer.get_absolute_url }}">
-                  <img
-                    src="{% if best_post.writer.avatar %}{{ best_post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-                    alt=""
-                  />
+                  <img src="{% if best_post.writer.avatar %}{{ best_post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="" />
                   <span>By {{best_post.writer.username}}</span></a
                 >
               </div>
@@ -59,9 +44,7 @@
           </div>
           <!--list-post end-->
         </div>
-        <a href="{% url 'posts:posts' %}" class="dark-btn fl-wrap">
-          Read all News
-        </a>
+        <a href="{% url 'posts:posts' %}" class="dark-btn fl-wrap"> Read all </a>
         {% endif %}
       </div>
       <div class="col-md-7">
@@ -88,24 +71,15 @@
                 <div class="list-post-media">
                   <a href="{{post.get_absolute_url}}">
                     <div class="bg-wrap">
-                      <div
-                        class="bg"
-                        data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-                      ></div>
+                      <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
                     </div>
                   </a>
-                  <span class="post-media_title"
-                    >Lionnic &copy; This image is subjected to copyright</span
-                  >
+                  <span class="post-media_title">Lionnic &copy; This image is subjected to copyright</span>
                 </div>
                 <div class="list-post-content">
-                  <a class="post-category-marker" href="#"
-                    >{{post.category|upper}}</a
-                  >
+                  <a class="post-category-marker" href="#">{{post.category|upper}}</a>
                   <h3>
-                    <a href="{{post.get_absolute_url}}"
-                      >{{post.title|truncatewords:"10"}}</a
-                    >
+                    <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                   </h3>
                   <span class="post-date"
                     ><i class="far fa-clock"></i>
@@ -114,17 +88,12 @@
                   >
                   <p>{{post.summary|truncatewords:"20"}}</p>
                   <ul class="post-opt">
-                    <li>
-                      <i class="far fa-comments-alt"></i> {{post.comments}}
-                    </li>
+                    <li><i class="fas fa-comments"></i> {{post.comments}}</li>
                     <li><i class="fal fa-eye"></i> {{post.views}}</li>
                   </ul>
                   <div class="author-link">
                     <a href="{{ post.writer.get_absolute_url }}">
-                      <img
-                        src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-                        alt=""
-                      />
+                      <img src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="" />
                       <span>By {{post.writer.username}}</span></a
                     >
                   </div>

@@ -12,27 +12,14 @@
           <div class="hero-carousel-item fl-wrap">
             <div class="grid-post-item bold_gpi fl-wrap">
               <div class="grid-post-media gpm_sing">
-                <div
-                  class="bg"
-                  data-bg="{% if slide.bg_image %}{{slide.bg_image.url}}{% else %}{{slide.image.url}}{% endif %}"
-                ></div>
+                <div class="bg" data-bg="{% if slide.bg_image %}{{slide.bg_image.url}}{% else %}{{slide.image.url}}{% endif %}"></div>
                 <div class="author-link">
-                  <a href="{{slide.writer.get_public_profile_url}}"
-                    ><img
-                      src="{% if slide.writer.avatar %}{{slide.writer.avatar.url}}{% else %}{% static 'images/newsfoxn.png' %}{% endif %}"
-                      alt="profile image"
-                    />
-                    <span>By {{slide.writer.username|title}}</span></a
-                  >
+                  <a href="{{slide.writer.get_public_profile_url}}"><img src="{% if slide.writer.avatar %}{{slide.writer.avatar.url}}{% else %}{% static 'images/newsfoxn.png' %}{% endif %}" alt="profile image" /> <span>By {{slide.writer.username|title}}</span></a>
                 </div>
                 <div class="grid-post-media_title">
-                  <a class="post-category-marker" href="javascript:void"
-                    >{{slide.category|title}}</a
-                  >
+                  <a class="post-category-marker" href="javascript:void">{{slide.category|title}}</a>
                   <h4>
-                    <a href="{{slide.get_absolute_url}}"
-                      >{{slide.title|truncatewords:"20"}}</a
-                    >
+                    <a href="{{slide.get_absolute_url}}">{{slide.title|truncatewords:"20"}}</a>
                   </h4>
                   <span class="video-date"
                     ><i class="far fa-clock"></i>
@@ -41,9 +28,7 @@
                   >
                   <!---->
                   <ul class="post-opt">
-                    <li>
-                      <i class="far fa-comments-alt"></i> {{slide.comments}}
-                    </li>
+                    <li><i class="fas fa-comments"></i> {{slide.comments}}</li>
                     <li><i class="fal fa-eye"></i> {{slide.views}}</li>
                   </ul>
                 </div>
@@ -60,27 +45,14 @@
           <div class="hero-carousel-item hero-carousel-item_half fl-wrap">
             <div class="grid-post-item bold_gpi fl-wrap">
               <div class="grid-post-media gpm_sing">
-                <div
-                  class="bg"
-                  data-bg="{% if slide.bg_image %}{{slide.bg_image.url}}{% else %}{{slide.image.url}}{% endif %}"
-                ></div>
+                <div class="bg" data-bg="{% if slide.bg_image %}{{slide.bg_image.url}}{% else %}{{slide.image.url}}{% endif %}"></div>
                 <div class="author-link">
-                  <a href="{{slide.writer.get_public_profile_url}}"
-                    ><img
-                      src="{% if slide.writer.avatar %}{{slide.writer.avatar.url}}{% else %}{% static 'images/newsfoxn.png' %}{% endif %}"
-                      alt="profile image"
-                    />
-                    <span>By {{slide.writer.username|title}}</span></a
-                  >
+                  <a href="{{slide.writer.get_public_profile_url}}"><img src="{% if slide.writer.avatar %}{{slide.writer.avatar.url}}{% else %}{% static 'images/newsfoxn.png' %}{% endif %}" alt="profile image" /> <span>By {{slide.writer.username|title}}</span></a>
                 </div>
                 <div class="grid-post-media_title">
-                  <a class="post-category-marker" href="javascript:void"
-                    >{{slide.category|title}}</a
-                  >
+                  <a class="post-category-marker" href="javascript:void">{{slide.category|title}}</a>
                   <h4>
-                    <a href="{{slide.get_absolute_url}}"
-                      >{{slide.title|truncatewords:"20"}}</a
-                    >
+                    <a href="{{slide.get_absolute_url}}">{{slide.title|truncatewords:"20"}}</a>
                   </h4>
                   <span class="video-date"
                     ><i class="far fa-clock"></i>
@@ -89,9 +61,7 @@
                   >
                   <!---->
                   <ul class="post-opt">
-                    <li>
-                      <i class="far fa-comments-alt"></i> {{slide.comments}}
-                    </li>
+                    <li><i class="fas fa-comments"></i> {{slide.comments}}</li>
                     <li><i class="fal fa-eye"></i> {{slide.views}}</li>
                   </ul>
                 </div>

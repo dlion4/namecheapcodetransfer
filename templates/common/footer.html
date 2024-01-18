@@ -16,10 +16,9 @@
                   alt="logo"
               /></a>
               <p>
-                As Lionnic, we channel the fearless spirit of a lion, committed
-                to being your steadfast guide. Our purpose is simple: to deliver
-                dependable, real-time insights that traverse the ever-evolving
-                landscape of our world.
+                As Lionnic, we channel the fearless spirit of a lion, committed to being your steadfast guide. Our purpose is to deliver dependable, real-time insights that traverse the ever-evolving landscape of our world. Rely on Lionnic for news, Parental Tips, Pet health and lifestyle updates as we
+            believe that knowledge illuminates the path to progress.
+          </p>.
               </p>
 
               <div class="footer-social fl-wrap">
@@ -85,8 +84,18 @@
             <div class="footer-widget-content">
               <div class="footer-list footer-box fl-wrap">
                 <ul>
-                  <li><a href="{% url 'contact' %}">Premium</a></li>
+                  <li>
+                  <a href="{% url 'posts:home' %}" class="menu-home">Home</a>
+            </li>
+                <li>
+                  <a href="{% url 'about'%}" class="menu-about">About Us</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}" class="menu-contacts">Contact Us</a>
+                </li>
+
                   <!--
+                    <li><a href="{% url 'contact' %}">Featured</a></li>
                     
                     <li><a href="{% url 'contact' %}">Advertisment</a></li>
                     <li><a href="{% url 'contact' %}">Sponsorship</a></li>
@@ -110,7 +119,7 @@
             <div class="footer-widget-content">
               <div class="subcribe-form fl-wrap">
                 <p>
-                  Get the latest news delivered directly to your inbox. Sign up
+                  Get the latest updates delivered directly to your inbox. Sign up
                   for our email updates and we'll keep you informed about all
                   the latest happenings.
                 </p>

@@ -8,20 +8,8 @@
       <div class="box-widget-content">
         <div class="search-widget fl-wrap">
           <form action="#">
-            <input
-              name="se"
-              id="se12"
-              type="text"
-              class="search"
-              placeholder="Search..."
-              value=""
-            />
-            <button
-              type="button"
-              title="shop"
-              class="search-submit2"
-              id="submit_btn12"
-            >
+            <input name="se" id="se12" type="text" class="search" placeholder="Search..." value="" />
+            <button type="button" title="shop" class="search-submit2" id="submit_btn12">
               <i class="far fa-search"></i>
             </button>
           </form>
@@ -77,11 +65,7 @@
       <div class="widget-title">Follow Us</div>
       <div class="box-widget-content">
         <div class="social-widget">
-          <a
-            href="https://www.facebook.com/profile.php?id=61552059008878"
-            target="_blank"
-            class="facebook-soc"
-          >
+          <a href="https://www.facebook.com/profile.php?id=61552059008878" target="_blank" class="facebook-soc">
             <i class="fab fa-facebook-f"></i>
             <!--
 
@@ -89,11 +73,7 @@
               <span class="soc-widget_counter">2600+</span>
             -->
           </a>
-          <a
-            href="https://twitter.com/lionnic_X"
-            target="_blank"
-            class="twitter-soc"
-          >
+          <a href="https://twitter.com/lionnic_X" target="_blank" class="twitter-soc">
             <i class="fab fa-twitter"></i>
             <!--
 
@@ -109,11 +89,7 @@
               <span class="soc-widget_counter">1800+</span>
             -->
           </a>
-          <a
-            href="https://www.instagram.com/lionnic_updates/"
-            target="_blank"
-            class="instagram-soc"
-          >
+          <a href="https://www.instagram.com/lionnic_updates/" target="_blank" class="instagram-soc">
             <i class="fab fa-instagram"></i>
             <!--
 
@@ -132,8 +108,8 @@
         <div class="content-tabs-wrap tabs-act tabs-widget fl-wrap">
           <div class="content-tabs fl-wrap">
             <ul class="tabs-menu fl-wrap no-list-style">
-              <li class="current"><a href="#tab-popular"> Popular News </a></li>
-              <li><a href="#tab-resent">Resent News</a></li>
+              <li class="current"><a href="#tab-popular"> Popular </a></li>
+              <li><a href="#tab-resent">Recent </a></li>
             </ul>
           </div>
           <!--tabs -->
@@ -147,15 +123,11 @@
                   <!-- post-widget-item -->
                   <div class="post-widget-item fl-wrap">
                     <div class="post-widget-item-media">
-                      <a href="{{post.get_absolute_url}}"
-                        ><img src="{{post.image.url}}" alt=""
-                      /></a>
+                      <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                     </div>
                     <div class="post-widget-item-content">
                       <h4>
-                        <a href="{{post.get_absolute_url}}"
-                          >{{post.title|truncatewords:"10"}}</a
-                        >
+                        <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                       </h4>
                       <ul class="pwic_opt">
                         <li>
@@ -166,10 +138,7 @@
                           >
                         </li>
                         <li>
-                          <span
-                            ><i class="far fa-comments-alt"></i
-                            >{{post.comments}}</span
-                          >
+                          <span><i class="fas fa-comments"></i>{{post.comments}}</span>
                         </li>
                         <li>
                           <span><i class="fal fa-eye"></i>{{post.views}}</span>
@@ -193,15 +162,11 @@
                   <!-- post-widget-item -->
                   <div class="post-widget-item fl-wrap">
                     <div class="post-widget-item-media">
-                      <a href="{{post.get_absolute_url}}"
-                        ><img src="{{post.image.url}}" alt=""
-                      /></a>
+                      <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                     </div>
                     <div class="post-widget-item-content">
                       <h4>
-                        <a href="{{post.get_absolute_url}}"
-                          >{{post.title|truncatewords:"10"}}</a
-                        >
+                        <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                       </h4>
                       <ul class="pwic_opt">
                         <li>
@@ -212,10 +177,7 @@
                           >
                         </li>
                         <li>
-                          <span
-                            ><i class="far fa-comments-alt"></i
-                            >{{post.comments}}</span
-                          >
+                          <span><i class="fas fa-comments"></i>{{post.comments}}</span>
                         </li>
                         <li>
                           <span><i class="fal fa-eye"></i>{{post.views}}</span>

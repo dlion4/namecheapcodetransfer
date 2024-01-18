@@ -2279,7 +2279,7 @@ section {
 }
 .post-opt li {
   float: left;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -3709,23 +3709,9 @@ section {
   transition: all 200ms linear;
 }
 .post-widget-item-media a:after,
-.list-post-media a:after,
-.grid-post-media a.gpm_link:after {
-  font-family: Font Awesome\5 Pro;
-  content: "\f178";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  line-height: 10px;
-  margin: -5px 0 0 -5px;
-  z-index: 3;
-  color: #fff;
-  opacity: 0;
-  transition: all 200ms linear;
-}
-.list-post-media a:after,
+
+
+
 .grid-post-media a.gpm_link:after {
   width: 40px;
   height: 40px;

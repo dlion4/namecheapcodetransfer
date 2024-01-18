@@ -21,28 +21,18 @@
                   <div class="col-md-6">
                     <!--list-post-->
                     <div class="list-post fl-wrap">
-                      <a class="post-category-marker" href=""
-                        >{{post.category|title}}</a
-                      >
+                      <a class="post-category-marker" href="">{{post.category|title}}</a>
                       <div class="list-post-media">
                         <a href="{{post.get_absolute_url}}">
                           <div class="bg-wrap">
-                            <div
-                              class="bg"
-                              data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-                            ></div>
+                            <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
                           </div>
                         </a>
-                        <span class="post-media_title"
-                          >Lionnic &copy; This image is subjected to
-                          copyright</span
-                        >
+                        <span class="post-media_title">Lionnic &copy; This image is subjected to copyright</span>
                       </div>
                       <div class="list-post-content">
                         <h3>
-                          <a href="{{post.get_absolute_url}}"
-                            >{{post.title|title|truncatewords:"20"}}</a
-                          >
+                          <a href="{{post.get_absolute_url}}">{{post.title|title|truncatewords:"20"}}</a>
                         </h3>
                         <span class="post-date"
                           ><i class="far fa-clock"></i>
@@ -52,7 +42,7 @@
                         <!---->
                         <ul class="post-opt">
                           <li>
-                            <i class="far fa-comments-alt"></i>
+                            <i class="fas fa-comments"></i>
                             {{post.comments}}
                           </li>
 
@@ -79,27 +69,17 @@
                     <div class="swiper-slide">
                       <div class="grid-post-item bold_gpi fl-wrap">
                         <div class="grid-post-media gpm_sing">
-                          <div
-                            class="bg"
-                            data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-                          ></div>
+                          <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
                           <div class="author-link">
                             <a href="{{ post.writer.get_absolute_url }}">
-                              <img
-                                src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-                                alt=""
-                              />
+                              <img src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="" />
                               <span>By Milimo Lion</span></a
                             >
                           </div>
                           <div class="grid-post-media_title">
-                            <a class="post-category-marker" href=""
-                              >{{post.category|upper}}</a
-                            >
+                            <a class="post-category-marker" href="">{{post.category|upper}}</a>
                             <h4>
-                              <a href="{{post.get_absolute_url}}"
-                                >{{post.title|title|truncatewords:"20"}}</a
-                              >
+                              <a href="{{post.get_absolute_url}}">{{post.title|title|truncatewords:"20"}}</a>
                             </h4>
                             <span class="video-date"
                               ><i class="far fa-clock"></i
@@ -108,7 +88,7 @@
                             >
                             <ul class="post-opt">
                               <li>
-                                <i class="far fa-comments-alt"></i>
+                                <i class="fas fa-comments"></i>
                                 {{post.comments}}
                               </li>
                               <li><i class="fal fa-eye"></i> {{post.views}}</li>
@@ -139,9 +119,9 @@
                 <div class="content-tabs fl-wrap">
                   <ul class="tabs-menu fl-wrap no-list-style">
                     <li class="current">
-                      <a href="#tab-popular"> Popular News </a>
+                      <a href="#tab-popular"> Popular </a>
                     </li>
-                    <li><a href="#tab-resent">Recent News</a></li>
+                    <li><a href="#tab-resent">Recent </a></li>
                   </ul>
                 </div>
                 <!--tabs -->
@@ -155,15 +135,11 @@
                         <!-- post-widget-item -->
                         <div class="post-widget-item fl-wrap">
                           <div class="post-widget-item-media">
-                            <a href="{{post.get_absolute_url}}"
-                              ><img src="{{post.image.url}}" alt=""
-                            /></a>
+                            <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                           </div>
                           <div class="post-widget-item-content">
                             <h4>
-                              <a href="{{post.get_absolute_url}}"
-                                >{{post.title|truncatewords:"10"}}</a
-                              >
+                              <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                             </h4>
                             <ul class="pwic_opt">
                               <li><span>By {{post.writer.username}}</span></li>
@@ -175,16 +151,10 @@
                                 >
                               </li>
                               <li>
-                                <span
-                                  ><i class="far fa-comments-alt"></i
-                                  >{{post.comments}}</span
-                                >
+                                <span><i class="fas fa-comments"></i></i>{{post.comments}}</span>
                               </li>
                               <li>
-                                <span
-                                  ><i class="fal fa-eye"></i
-                                  >{{post.views}}</span
-                                >
+                                <span><i class="fal fa-eye"></i>{{post.views}}</span>
                               </li>
                             </ul>
                           </div>
@@ -205,15 +175,11 @@
                         <!-- post-widget-item -->
                         <div class="post-widget-item fl-wrap">
                           <div class="post-widget-item-media">
-                            <a href="{{post.get_absolute_url}}"
-                              ><img src="{{post.image.url}}" alt=""
-                            /></a>
+                            <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                           </div>
                           <div class="post-widget-item-content">
                             <h4>
-                              <a href="{{post.get_absolute_url}}"
-                                >{{post.title|truncatewords:"10"}}</a
-                              >
+                              <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                             </h4>
                             <ul class="pwic_opt">
                               <li>
@@ -224,16 +190,10 @@
                                 >
                               </li>
                               <li>
-                                <span
-                                  ><i class="far fa-comments-alt"></i
-                                  >{{post.comments}}</span
-                                >
+                                <span><i class="fas fa-comments"></i></i>{{post.comments}}</span>
                               </li>
                               <li>
-                                <span
-                                  ><i class="fal fa-eye"></i
-                                  >{{post.views}}</span
-                                >
+                                <span><i class="fal fa-eye"></i>{{post.views}}</span>
                               </li>
                             </ul>
                           </div>
@@ -264,11 +224,7 @@
             <div class="widget-title">Follow Us</div>
             <div class="box-widget-content">
               <div class="social-widget">
-                <a
-                  href="{{site_social_fab}}"
-                  target="_blank"
-                  class="facebook-soc"
-                >
+                <a href="{{site_social_fab}}" target="_blank" class="facebook-soc">
                   <i class="fab fa-facebook-f"></i>
                   <!--
 
@@ -276,33 +232,18 @@
                     <span class="soc-widget_counter">1200+</span>
                   -->
                 </a>
-                <a
-                  href="{{site_social_twitter}}"
-                  target="_blank"
-                  class="twitter-soc"
-                >
+                <a href="{{site_social_twitter}}" target="_blank" class="twitter-soc">
                   <i class="fab fa-twitter"></i>
 
-                  {% comment %} <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1400+</span> {% endcomment %}
+                  {% comment %} <span class="soc-widget-title">Followers</span> <span class="soc-widget_counter">1400+</span> {% endcomment %}
                 </a>
-                <a
-                  href="{{site_social_youtube}}"
-                  target="_blank"
-                  class="youtube-soc"
-                >
+                <a href="{{site_social_youtube}}" target="_blank" class="youtube-soc">
                   <i class="fab fa-youtube"></i>
-                  {% comment %} <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1100+</span> {% endcomment %}
+                  {% comment %} <span class="soc-widget-title">Followers</span> <span class="soc-widget_counter">1100+</span> {% endcomment %}
                 </a>
-                <a
-                  href="{{site_social_instagram}}"
-                  target="_blank"
-                  class="instagram-soc"
-                >
+                <a href="{{site_social_instagram}}" target="_blank" class="instagram-soc">
                   <i class="fab fa-instagram"></i>
-                  {% comment %} <span class="soc-widget-title">Followers</span>
-                  <span class="soc-widget_counter">1600+</span> {% endcomment %}
+                  {% comment %} <span class="soc-widget-title">Followers</span> <span class="soc-widget_counter">1600+</span> {% endcomment %}
                 </a>
               </div>
             </div>
@@ -318,11 +259,7 @@
                 width: 160,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!-- box-widget  end -->
@@ -354,20 +291,13 @@
                       <div class="grid-post-item fl-wrap">
                         <div class="grid-post-media gpm_sing">
                           <div class="bg-wrap">
-                            <div
-                              class="bg"
-                              data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-                            ></div>
+                            <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
                             <div class="overlay"></div>
                           </div>
                           <div class="grid-post-media_title">
-                            <a class="post-category-marker" href="category.html"
-                              >{{post.category}}</a
-                            >
+                            <a class="post-category-marker" href="category.html">{{post.category}}</a>
                             <h4>
-                              <a href="{{post.get_absolute_url}}"
-                                >{{post.title|truncatewords:"20"}}</a
-                              >
+                              <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"20"}}</a>
                             </h4>
                             <span class="video-date"
                               ><i class="far fa-clock"></i>
@@ -376,7 +306,7 @@
                             >
                             <ul class="post-opt">
                               <li>
-                                <i class="far fa-comments-alt"></i>
+                                <i class="fas fa-comments"></i>
                                 {{post.comments}}
                               </li>
                               <li><i class="fal fa-eye"></i> {{post.views}}</li>
@@ -404,11 +334,7 @@
                 width: 468,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c8af44ee273b1cceb1545d3af3826c73/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c8af44ee273b1cceb1545d3af3826c73/invoke.js"></scr' + "ipt>");
             </script>
           </div>
 
@@ -422,11 +348,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
 
@@ -441,11 +363,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -458,11 +376,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -475,11 +389,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -492,11 +402,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -509,11 +415,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -526,11 +428,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -543,11 +441,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -560,11 +454,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -577,11 +467,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -594,11 +480,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -611,11 +493,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -628,11 +506,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -645,11 +519,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -662,11 +532,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -679,11 +545,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -696,11 +558,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -713,11 +571,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -730,11 +584,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -747,11 +597,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -764,11 +610,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -781,11 +623,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -798,11 +636,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -815,11 +649,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -832,11 +662,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -849,11 +675,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -866,11 +688,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -883,11 +701,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -900,11 +714,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->
@@ -917,11 +727,7 @@
                 width: 300,
                 params: {},
               };
-              document.write(
-                "<scr" +
-                  'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-                  "ipt>"
-              );
+              document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
             </script>
           </div>
           <!--xxxxxxxxxxx-->

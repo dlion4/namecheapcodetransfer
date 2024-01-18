@@ -17,21 +17,13 @@
       <div class="clearfix"></div>
       <div class="author-link">
         <a href="{{post.writer.get_public_profile_url}}">
-          <img
-            src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-            alt="{{post.writer}}"
-          />
-          <span
-            >By
-            {{post.writer.full_name|default:post.writer.username|upper}}</span
-          ></a
+          <img src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="{{post.writer}}" />
+          <span>By {{post.writer.full_name|default:post.writer.username|upper}}</span></a
         >
       </div>
-      <span class="post-date"
-        ><i class="far fa-clock"></i> {{post.updatedAt|date:"d M Y"}}</span
-      >
+      <span class="post-date"><i class="far fa-clock"></i> {{post.updatedAt|date:"d M Y"}}</span>
       <ul class="post-opt">
-        <li><i class="far fa-comments-alt"></i> {{post.comments}}</li>
+        <li><i class="fas fa-comments"></i> {{post.comments}}</li>
         <li><i class="fal fa-eye"></i> {{post.views}}</li>
       </ul>
     </div>
@@ -46,40 +38,18 @@
               {% if post.get_sliders %}
               <!-- swiper-slide   -->
               {% for post in post.get_sliders %}
-              <div
-                class="swiper-slide hov_zoom"
-                style="width: 100%; max-height: 400px"
-              >
-                <img
-                  src="{{post.slider.url}}"
-                  style="object-fit: contain"
-                  alt=""
-                />
-                <a href="{{post.slider.url}}" class="box-media-zoom popup-image"
-                  >search</a
-                >
-                <span class="post-media_title pmd_vis"
-                  >Lionnic © This image is subjected to copyright</span
-                >
+              <div class="swiper-slide hov_zoom" style="width: 100%; max-height: 400px">
+                <img src="{{post.slider.url}}" style="object-fit: contain" alt="" />
+                <a href="{{post.slider.url}}" class="box-media-zoom popup-image">search</a>
+                <span class="post-media_title pmd_vis">Lionnic © This image is subjected to copyright</span>
               </div>
               {% endfor %}
               <!--  -->
               {% endif %}
-              <div
-                class="swiper-slide hov_zoom"
-                style="max-height: 400px; width: 100%"
-              >
-                <img
-                  src="{{post.image.url}}"
-                  style="object-fit: contain"
-                  alt=""
-                />
-                <a href="{{post.image.url}}" class="box-media-zoom popup-image"
-                  >search</a
-                >
-                <span class="post-media_title pmd_vis"
-                  >Lionnic © This image is subjected to copyright</span
-                >
+              <div class="swiper-slide hov_zoom" style="max-height: 400px; width: 100%">
+                <img src="{{post.image.url}}" style="object-fit: contain" alt="" />
+                <a href="{{post.image.url}}" class="box-media-zoom popup-image">search</a>
+                <span class="post-media_title pmd_vis">Lionnic © This image is subjected to copyright</span>
               </div>
             </div>
           </div>
@@ -111,37 +81,17 @@
       </div>
 
       <div class="fs-wrap smpar fl-wrap">
-        <div class="fontSize">
-          <span class="fs_title">Font size: </span
-          ><input
-            type="text"
-            class="rage-slider"
-            data-step="1"
-            data-min="12"
-            data-max="15"
-            value="12"
-          />
-        </div>
+        <div class="fontSize"><span class="fs_title">Font size: </span><input type="text" class="rage-slider" data-step="1" data-min="10" data-max="30" value="12" /></div>
         <div class="show-more-snopt smact">
           <i class="fal fa-ellipsis-v"></i>
         </div>
         <div class="show-more-snopt-tooltip">
-          <a href="#comments" class="custom-scroll-link">
-            <i class="fas fa-comment-alt"></i> Write a Comment</a
-          >
+          <a href="#comments" class="custom-scroll-link"> <i class="fas fa-comment-alt"></i> Write a Comment</a>
           <a href="#"> <i class="fas fa-exclamation-triangle"></i> Report </a>
         </div>
-        <a
-          class="print-btn"
-          href="javascript:window.print()"
-          data-microtip-position="bottom"
-          ><span>Print</span><i class="fal fa-print"></i
-        ></a>
       </div>
       <div class="clearfix"></div>
-      <div class="single-post-content_text" id="font_chage">
-        {{post.content|safe}}
-      </div>
+      <div class="single-post-content_text" id="font_chage">{{post.content|safe}}</div>
       {% if post.tags %}
       <div class="single-post-footer fl-wrap">
         <div class="post-single-tags">
@@ -157,34 +107,24 @@
       <!-- single-post-nav"   -->
       <div class="single-post-nav fl-wrap">
         {% if prev %}
-        <a
-          href="{{prev.get_absolute_url}}"
-          class="single-post-nav_prev spn_box"
-        >
+        <a href="{{prev.get_absolute_url}}" class="single-post-nav_prev spn_box">
           <div class="spn_box_img">
             <img src="{{prev.image.url}}" class="respimg" alt="" />
           </div>
           <div class="spn-box-content">
-            <span class="spn-box-content_subtitle"
-              ><i class="fas fa-caret-left"></i> Prev Post</span
-            >
+            <span class="spn-box-content_subtitle"><i class="fas fa-caret-left"></i> Prev Post</span>
             <span class="spn-box-content_title">{{prev.title}}</span>
           </div>
         </a>
         {% endif %}
         <!--  -->
         {% if next %}
-        <a
-          href="{{next.get_absolute_url}}"
-          class="single-post-nav_next spn_box"
-        >
+        <a href="{{next.get_absolute_url}}" class="single-post-nav_next spn_box">
           <div class="spn_box_img">
             <img src="{{next.image.url}}" class="respimg" alt="" />
           </div>
           <div class="spn-box-content">
-            <span class="spn-box-content_subtitle"
-              >Next Post <i class="fas fa-caret-right"></i
-            ></span>
+            <span class="spn-box-content_subtitle">Next Post <i class="fas fa-caret-right"></i></span>
             <span class="spn-box-content_title">{{next.title}}</span>
           </div>
         </a>
@@ -197,48 +137,29 @@
     <!-- post-author-->
     <div class="post-author fl-wrap">
       <div class="author-img">
-        <img
-          src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-          alt="{{post.writer}}"
-        />
+        <img src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="{{post.writer}}" />
       </div>
       <div class="author-content fl-wrap">
         <h5>
           Written By
-          <a href="{{post.writer.get_public_profile_url}}"
-            >{{post.writer.username}}</a
-          >
+          <a href="{{post.writer.get_public_profile_url}}">{{post.writer.username}}</a>
         </h5>
         <p>{{post.writer.bio|truncatewords:"40"}}</p>
       </div>
       <div class="profile-card-footer fl-wrap">
-        <a
-          href="{{post.writer.get_public_profile_url}}"
-          class="post-author_link"
-          >View Profile <i class="fas fa-caret-right"></i
-        ></a>
+        <a href="{{post.writer.get_public_profile_url}}" class="post-author_link">View Profile <i class="fas fa-caret-right"></i></a>
         <div class="profile-card-footer_soc">
           <div class="profile-card-footer_title">Follow:</div>
           <div class="profile-card-social">
             <ul>
               <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61552059008878"
-                  target="_blank"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="https://www.facebook.com/profile.php?id=61552059008878" target="_blank"><i class="fab fa-facebook-f"></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/lionnic_X" target="_blank"
-                  ><i class="fab fa-twitter"></i
-                ></a>
+                <a href="https://twitter.com/lionnic_X" target="_blank"><i class="fab fa-twitter"></i></a>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/lionnic_updates/"
-                  target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
+                <a href="https://www.instagram.com/lionnic_updates/" target="_blank"><i class="fab fa-instagram"></i></a>
               </li>
               <!--
 
@@ -266,18 +187,14 @@
           <div class="col-md-6">
             <!--list-post-->
             <div class="list-post fl-wrap">
-              <a class="post-category-marker" href="javascript:void(0);"
-                >{{post.category}}</a
-              >
+              <a class="post-category-marker" href="javascript:void(0);">{{post.category}}</a>
               <div class="list-post-media">
                 <a href="{{post.get_absolute_url}}">
                   <div class="bg-wrap">
                     <div class="bg" data-bg="{{post.image.url}}"></div>
                   </div>
                 </a>
-                <span class="post-media_title"
-                  >Lionnic &copy; This image is subjected to copyright</span
-                >
+                <span class="post-media_title">Lionnic &copy; This image is subjected to copyright</span>
               </div>
               <div class="list-post-content">
                 <h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
@@ -299,19 +216,12 @@
 
     <div id="comments" class="single-post-comm fl-wrap">
       {% if post.get_comments %}
-      <div class="pr-subtitle prs_big">
-        comment{{post.comments|pluralize}} <span>{{post.comments}}</span>
-      </div>
+      <div class="pr-subtitle prs_big">comment{{post.comments|pluralize}} <span>{{post.comments}}</span></div>
       <ul class="commentlist clearafix">
         {% for comment in post.get_comments %}
         <li class="comment">
           <div class="comment-author">
-            <img
-              alt=""
-              src="{% static 'images/avatar/ceod.jpg' %}"
-              width="50"
-              height="50"
-            />
+            <img alt="" src="{% static 'images/avatar/ceod.jpg' %}" width="50" height="50" />
           </div>
           <div class="comment-body smpar">
             <h4><a href="#">{{comment.full_name}}</a></h4>
@@ -319,20 +229,14 @@
               <i class="far fa-ellipsis-h"></i>
             </div>
             <div class="show-more-snopt-tooltip bxwt">
-              <a href="#">
-                <i class="fas fa-exclamation-triangle"></i> Report
-              </a>
+              <a href="#"> <i class="fas fa-exclamation-triangle"></i> Report </a>
             </div>
             <div class="clearfix"></div>
             <p>{{comment.comment}}</p>
             {% if request.user.is_staff %}
-            <a class="comment-reply-link" href="#"
-              ><i class="fas fa-reply"></i> Reply</a
-            >
+            <a class="comment-reply-link" href="#"><i class="fas fa-reply"></i> Reply</a>
             {% endif %}
-            <div class="comment-meta">
-              <i class="far fa-clock"></i> {{comment.postedAt|date:"F d, Y"}}
-            </div>
+            <div class="comment-meta"><i class="far fa-clock"></i> {{comment.postedAt|date:"F d, Y"}}</div>
             <div class="comment-body_dec"></div>
           </div>
         </li>
@@ -340,12 +244,7 @@
 
         <li class="comment comment_reply">
           <div class="comment-author">
-            <img
-              alt=""
-              src="{% static 'images/avatar/hip-hop.png' %}"
-              width="50"
-              height="50"
-            />
+            <img alt="" src="{% static 'images/avatar/hip-hop.png' %}" width="50" height="50" />
           </div>
           <div class="comment-body smpar">
             <h4><a href="#">{{post.writer.username}}</a></h4>
@@ -356,9 +255,7 @@
             <div class="clearfix"></div>
             <p>{{comment.get_comment_reply.reply }}</p>
             <!-- <a class="comment-reply-link" href="#"><i class="fas fa-reply"></i> Reply</a> -->
-            <div class="comment-meta">
-              <i class="far fa-clock"></i> {{comment.postedAt|date:"F d, Y"}}
-            </div>
+            <div class="comment-meta"><i class="far fa-clock"></i> {{comment.postedAt|date:"F d, Y"}}</div>
             <div class="comment-body_dec"></div>
           </div>
         </li>
@@ -367,17 +264,9 @@
       {% endif %}
       <div class="clearfix"></div>
       <div id="addcom" class="clearafix">
-        <div class="pr-subtitle">
-          Leave A Comment <i class="fas fa-caret-down"></i>
-        </div>
+        <div class="pr-subtitle">Leave A Comment <i class="fas fa-caret-down"></i></div>
         <div class="comment-reply-form fl-wrap">
-          <form
-            onsubmit="validate()"
-            method="POST"
-            id="add-comment"
-            class="add-comment custom-form"
-            action="{{post.get_comment_upload_url}}"
-          >
+          <form onsubmit="validate()" method="POST" id="add-comment" class="add-comment custom-form" action="{{post.get_comment_upload_url}}">
             {% csrf_token %}
             <fieldset>
               <div class="row">
@@ -393,9 +282,7 @@
               <!-- <textarea placeholder="Your Comment:"></textarea> -->
               {{comment_form.comment}}
             </fieldset>
-            <button type="submit" class="btn float-btn color-btn">
-              Submit Comment <i class="fas fa-caret-right"></i>
-            </button>
+            <button type="submit" class="btn float-btn color-btn">Submit Comment <i class="fas fa-caret-right"></i></button>
           </form>
         </div>
       </div>
@@ -425,11 +312,7 @@
         width: 300,
         params: {},
       };
-      document.write(
-        "<scr" +
-          'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-          "ipt>"
-      );
+      document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
     </script>
   </div>
   <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzzz-->
@@ -457,15 +340,11 @@
                   <!-- post-widget-item -->
                   <div class="post-widget-item fl-wrap">
                     <div class="post-widget-item-media">
-                      <a href="{{post.get_absolute_url}}"
-                        ><img src="{{post.image.url}}" alt=""
-                      /></a>
+                      <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                     </div>
                     <div class="post-widget-item-content">
                       <h4>
-                        <a href="{{post.get_absolute_url}}"
-                          >{{post.title|truncatewords:"10"}}</a
-                        >
+                        <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                       </h4>
                       <ul class="pwic_opt">
                         <li><span>By {{post.writer.username}}</span></li>
@@ -477,10 +356,7 @@
                           >
                         </li>
                         <li>
-                          <span
-                            ><i class="far fa-comments-alt"></i
-                            >{{post.comments}}</span
-                          >
+                          <span><i class="fas fa-comments"></i></i>{{post.comments}}</span>
                         </li>
                         <li>
                           <span><i class="fal fa-eye"></i>{{post.views}}</span>
@@ -504,15 +380,11 @@
                   <!-- post-widget-item -->
                   <div class="post-widget-item fl-wrap">
                     <div class="post-widget-item-media">
-                      <a href="{{post.get_absolute_url}}"
-                        ><img src="{{post.image.url}}" alt=""
-                      /></a>
+                      <a href="{{post.get_absolute_url}}"><img src="{{post.image.url}}" alt="" /></a>
                     </div>
                     <div class="post-widget-item-content">
                       <h4>
-                        <a href="{{post.get_absolute_url}}"
-                          >{{post.title|truncatewords:"10"}}</a
-                        >
+                        <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"10"}}</a>
                       </h4>
                       <ul class="pwic_opt">
                         <li><span>By {{post.writer.username}}</span></li>
@@ -524,10 +396,7 @@
                           >
                         </li>
                         <li>
-                          <span
-                            ><i class="far fa-comments-alt"></i
-                            >{{post.comments}}</span
-                          >
+                          <span><i class="fas fa-comments"></i></i>{{post.comments}}</span>
                         </li>
                         <li>
                           <span><i class="fal fa-eye"></i>{{post.views}}</span>
@@ -568,11 +437,7 @@
           width: 160,
           params: {},
         };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/2c338da8faf87f7295d92c3e117b1301/invoke.js"></scr' +
-            "ipt>"
-        );
+        document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/2c338da8faf87f7295d92c3e117b1301/invoke.js"></scr' + "ipt>");
       </script>
     </div>
 
@@ -605,11 +470,7 @@
               <span class="soc-widget_counter">956+</span>
             -->
           </a>
-          <a
-            href="{{site_social_instagram}}"
-            target="_blank"
-            class="instagram-soc"
-          >
+          <a href="{{site_social_instagram}}" target="_blank" class="instagram-soc">
             <i class="fab fa-instagram"></i>
             <!--
               
@@ -631,11 +492,7 @@
           width: 160,
           params: {},
         };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' +
-            "ipt>"
-        );
+        document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' + "ipt>");
       </script>
     </div>
 
@@ -664,11 +521,7 @@
           width: 160,
           params: {},
         };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' +
-            "ipt>"
-        );
+        document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' + "ipt>");
       </script>
     </div>
 
@@ -686,20 +539,13 @@
                 <div class="grid-post-item fl-wrap">
                   <div class="grid-post-media gpm_sing">
                     <div class="bg-wrap">
-                      <div
-                        class="bg"
-                        data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-                      ></div>
+                      <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
                       <div class="overlay"></div>
                     </div>
                     <div class="grid-post-media_title">
-                      <a class="post-category-marker" href="category.html"
-                        >{{post.category}}</a
-                      >
+                      <a class="post-category-marker" href="category.html">{{post.category}}</a>
                       <h4>
-                        <a href="{{post.get_absolute_url}}"
-                          >{{post.title|truncatewords:"20"}}</a
-                        >
+                        <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"20"}}</a>
                       </h4>
                       <span class="video-date"
                         ><i class="far fa-clock"></i>
@@ -707,9 +553,7 @@
                         {{post.createdAt|date:"d M Y"}}</span
                       >
                       <ul class="post-opt">
-                        <li>
-                          <i class="far fa-comments-alt"></i> {{post.comments}}
-                        </li>
+                        <li><i class="fas fa-comments"></i> {{post.comments}}</li>
                         <li><span>By {{post.writer.username}}</span></li>
                         <li><i class="fal fa-eye"></i> {{post.views}}</li>
                       </ul>
@@ -738,11 +582,7 @@
           width: 160,
           params: {},
         };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' +
-            "ipt>"
-        );
+        document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' + "ipt>");
       </script>
     </div>
   </div>
@@ -759,11 +599,7 @@
         width: 160,
         params: {},
       };
-      document.write(
-        "<scr" +
-          'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' +
-          "ipt>"
-      );
+      document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/6021f72930d2dd52aadaaa394744f78a/invoke.js"></scr' + "ipt>");
     </script>
   </div>
   <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzz-->
@@ -780,11 +616,7 @@
         width: 300,
         params: {},
       };
-      document.write(
-        "<scr" +
-          'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' +
-          "ipt>"
-      );
+      document.write("<scr" + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/93f70612aa380c0ceebcd6c3311132fa/invoke.js"></scr' + "ipt>");
     </script>
   </div>
   <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzz-->

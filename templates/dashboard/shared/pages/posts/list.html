@@ -18,23 +18,15 @@
           <div class="content">
             <div class="actions_sidebar">
               <a href="javascript:void(0)"><i class="icon-share"></i></a>
-              <a href="javascript:void(0)"
-                ><i class="icon-heart"></i> <span>5</span></a
-              >
-              <a href="javascript:void(0)"
-                ><i class="icon-bubble"></i> <span>{{post.comments}}</span></a
-              >
+              <a href="javascript:void(0)"><i class="icon-heart"></i> <span>5</span></a>
+              <a href="javascript:void(0)"><i class="icon-bubble"></i> <span>{{post.comments}}</span></a>
             </div>
             <h4 class="title">{{post.title|truncatewords:"20"}}</h4>
             <p class="date">
               <small>{{post.createdAt|date:"M d Y"}}</small>
             </p>
             <p class="text">{{post.summary|truncatewords:100}}</p>
-            <a
-              class="btn btn-primary"
-              href="{{post.get_dashboard_absolute_url}}"
-              >READ MORE</a
-            >
+            <a class="btn btn-primary" href="{{post.get_dashboard_absolute_url}}">READ MORE</a>
           </div>
         </div>
       </div>
@@ -51,9 +43,7 @@
         <div class="body search">
           <div class="input-group m-b-0">
             <div class="input-group-prepend">
-              <span class="input-group-text"
-                ><i class="icon-magnifier"></i
-              ></span>
+              <span class="input-group-text"><i class="icon-magnifier"></i></span>
             </div>
             <input type="text" class="form-control" placeholder="Search..." />
           </div>
@@ -87,11 +77,7 @@
                   <p class="m-b-0">{{post.title|truncatewords:"20"}}</p>
                   <span>{{post.createdAt|date:"M d Y"}}</span>
                   <div class="img-post">
-                    <img
-                      src="{{post.image}}"
-                      alt="{{post.title}}"
-                      style="width: 100%; max-height: 200px"
-                    />
+                    <img src="{{post.image}}" alt="{{post.title}}" style="width: 100%; max-height: 200px" />
                   </div>
                 </div>
               </a>
@@ -177,17 +163,11 @@
         <div class="header">
           <h2>
             Email Newsletter
-            <small
-              >Get our products/news earlier than others, let’s get in
-              touch.</small
-            >
+            <small>Get updates earlier than others, let’s get in touch.</small>
           </h2>
         </div>
         <div class="body widget newsletter">
-          <form
-            action="{% url 'dashboard:subscribe_newsletter' %}"
-            method="POST"
-          >
+          <form action="{% url 'dashboard:subscribe_newsletter' %}" method="POST">
             {% csrf_token %}
             <div class="input-group">
               {{subscription_form.email}} {% if subscription_form.errors %}

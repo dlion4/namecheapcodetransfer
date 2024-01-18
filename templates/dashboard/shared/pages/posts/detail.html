@@ -4,122 +4,103 @@
 {% block title %} {{ block.super }} {{profile.username}} {% endblock title %}
 <!---->
 
-{% load static %}
-
-{% block content %}
-
+{% load static %} {% block content %}
 
 <div class="container-fluid">
-    <div class="row clearfix">
-        <div class="col-lg-8 col-md-12 left-box">
-            <div class="card single_post2">
-                <img class="img-fluid" src="{{post.image.url}}" alt="img" style="width:100%; height:400px !important;">
-                <div class="body">
-                    <div class="content">
-                      <div class="actions_sidebar">
-                        <a href="javascript:void(0)"
-                          ><i class="icon-share"></i
-                        ></a>
-                        <a href="javascript:void(0)"
-                          ><i class="icon-heart"></i> <span>5</span></a
-                        >
-                        <a href="javascript:void(0)"
-                          ><i class="icon-bubble"></i> <span>{{post.comments}}</span></a
-                        >
-                      </div>
-                      <h4 class="title">{{post.title|truncatewords:"20"}}</h4>
-                      <p class="date">
-                        <small>{{post.createdAt|date:"M d Y"}}</small>
-                      </p>
-                      <p class="text">{{post.summary|truncatewords:100}}</p>
-                     {% if request.user.user_profile == post.writer %}
-                        <a class="btn btn-info" href="{{post.get_dahboard_absolute_url}}">
-                            EDIT POST
-                        </a>
-                    {% endif %}
-                    </div>
-                  </div>                      
+  <div class="row clearfix">
+    <div class="col-lg-8 col-md-12 left-box">
+      <div class="card single_post2">
+        <img class="img-fluid" src="{{post.image.url}}" alt="img" style="width: 100%; height: 400px !important" />
+        <div class="body">
+          <div class="content">
+            <div class="actions_sidebar">
+              <a href="javascript:void(0)"><i class="icon-share"></i></a>
+              <a href="javascript:void(0)"><i class="icon-heart"></i> <span>5</span></a>
+              <a href="javascript:void(0)"><i class="icon-bubble"></i> <span>{{post.comments}}</span></a>
             </div>
-
-            <div class="col-lg-12 col-md-12">
-                <form method="post" action="{% url 'dashboard:multiple_upload_images' post.pk post.slug %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="card">
-                        <div class="header">
-                            <h2>File Upload (Upload multiple images related to post (optional))</h2>
-                           <p style="font-weight:600; color:crimson;">current photos ({{post.get_photos_count.count}})</p>
-                        </div>
-                        <div class="body">
-                            <input name="post_images" type="file" class="dropify" multiple required>
-                            <button type="submit" class="btn btn-info">upload multiple</button>
-                        </div>
-                    </div>
-                
-                </form>
-
-                </div>
-
-            {% if post.get_comments %}
-            <div class="card">
-                <div class="header">
-                    <h2>Comments {{post.comments}}</h2>
-                </div>
-                <div class="body">
-                    <ul class="comment-reply list-unstyled">
-                        {% for comment in post.get_comments  %}
-                        <li class="row clearfix">
-                            <div class="icon-box col-md-2 col-4"><img class="img-fluid img-thumbnail" src="{% static 'dashboard/images/sm/avatar2.jpg' %}" alt="Awesome Image"></div>
-                            <div class="text-box col-md-10 col-8 p-l-0 p-r0">
-                                <h5 class="m-b-0">{{comment.full_name}}</h5>
-                                <p>{{comment.comment}}</p>
-                                <ul class="list-inline">
-                                    <li><a href="javascript:void(0);">{{comment.postedAt|date:"M d Y"}}</a></li>
-                                    {% if comment.post.writer == request.user.user_profile %}
-                                    <li><a href="javascript:void(0);" class="js-sweetalert" data-type="prompt">Reply</a></li>
-                                    {% endif %}
-                                </ul>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>                                        
-                </div>
-            </div>
+            <h4 class="title">{{post.title|truncatewords:"20"}}</h4>
+            <p class="date">
+              <small>{{post.createdAt|date:"M d Y"}}</small>
+            </p>
+            <p class="text">{{post.summary|truncatewords:100}}</p>
+            {% if request.user.user_profile == post.writer %}
+            <a class="btn btn-info" href="{{post.get_dahboard_absolute_url}}"> EDIT POST </a>
             {% endif %}
+          </div>
         </div>
+      </div>
 
+      <div class="col-lg-12 col-md-12">
+        <form method="post" action="{% url 'dashboard:multiple_upload_images' post.pk post.slug %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="card">
+            <div class="header">
+              <h2>File Upload (Upload multiple images related to post (optional))</h2>
+              <p style="font-weight: 600; color: crimson">current photos ({{post.get_photos_count.count}})</p>
+            </div>
+            <div class="body">
+              <input name="post_images" type="file" class="dropify" multiple required />
+              <button type="submit" class="btn btn-info">upload multiple</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
-        <div class="col-lg-4 col-md-12 right-box">
-            <div class="card">
-                <div class="body search">
-                    <div class="input-group m-b-0">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="icon-magnifier"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Search...">                                    
-                    </div>
-                </div>
-            </div>
-           
-            
-            <div class="card">
-                <div class="header">
-                    <h2>Email Newsletter <small>Get our products/news earlier than others, let’s get in touch.</small></h2>
-                </div>
-                <div class="body widget newsletter">                        
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter Email">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="icon-paper-plane"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      {% if post.get_comments %}
+      <div class="card">
+        <div class="header">
+          <h2>Comments {{post.comments}}</h2>
         </div>
+        <div class="body">
+          <ul class="comment-reply list-unstyled">
+            {% for comment in post.get_comments %}
+            <li class="row clearfix">
+              <div class="icon-box col-md-2 col-4"><img class="img-fluid img-thumbnail" src="{% static 'dashboard/images/sm/avatar2.jpg' %}" alt="Awesome Image" /></div>
+              <div class="text-box col-md-10 col-8 p-l-0 p-r0">
+                <h5 class="m-b-0">{{comment.full_name}}</h5>
+                <p>{{comment.comment}}</p>
+                <ul class="list-inline">
+                  <li><a href="javascript:void(0);">{{comment.postedAt|date:"M d Y"}}</a></li>
+                  {% if comment.post.writer == request.user.user_profile %}
+                  <li><a href="javascript:void(0);" class="js-sweetalert" data-type="prompt">Reply</a></li>
+                  {% endif %}
+                </ul>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
     </div>
 
+    <div class="col-lg-4 col-md-12 right-box">
+      <div class="card">
+        <div class="body search">
+          <div class="input-group m-b-0">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="icon-magnifier"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="header">
+          <h2>Email Newsletter <small>Get our updates/news earlier than others, let’s get in touch.</small></h2>
+        </div>
+        <div class="body widget newsletter">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter Email" />
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="icon-paper-plane"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-
 
 {% endblock content %}

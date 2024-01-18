@@ -10,21 +10,14 @@
         <div class="list-post-media">
           <a href="{{post.get_absolute_url}}">
             <div class="bg-wrap">
-              <div
-                class="bg"
-                data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"
-              ></div>
+              <div class="bg" data-bg="{% if post.bg_image %}{{post.bg_image.url}}{% else %}{{post.image.url}}{% endif %}"></div>
             </div>
           </a>
-          <span class="post-media_title"
-            >Lionnic &copy; This image is subjected to copyright</span
-          >
+          <span class="post-media_title">Lionnic &copy; This image is subjected to copyright</span>
         </div>
         <div class="list-post-content">
           <h3>
-            <a href="{{post.get_absolute_url}}"
-              >{{post.title|truncatewords:"8"}}</a
-            >
+            <a href="{{post.get_absolute_url}}">{{post.title|truncatewords:"8"}}</a>
           </h3>
           <span class="post-date"
             ><i class="far fa-clock"></i>
@@ -33,15 +26,12 @@
           >
           <!---->
           <ul class="post-opt">
-            <li><i class="far fa-comments-alt"></i> {{post.comments}}</li>
+            <li><i class="fas fa-comments"></i> {{post.comments}}</li>
             <li><i class="fal fa-eye"></i> {{post.views}}</li>
           </ul>
           <div class="author-link">
             <a href="{{ post.writer.get_public_profile_url }}">
-              <img
-                src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-                alt=""
-              />
+              <img src="{% if post.writer.avatar %}{{ post.writer.avatar.url }}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="" />
               <span>By {{post.writer.username}}</span>
             </a>
           </div>

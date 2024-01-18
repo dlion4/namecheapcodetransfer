@@ -29,18 +29,10 @@
       <h2>{{post.title}}</h2>
       <h5>{{post.summary|truncatewords:"10"}}</h5>
       <div class="author-link">
-        <a href="{{post.writer.get_public_profile_url}}">
-          <img
-            src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}"
-            alt="{{post.writer.username}}"
-          /><span
-            >By
-            {{post.writer.full_name|default:post.writer.username|upper}}</span
-          >
-        </a>
+        <a href="{{post.writer.get_public_profile_url}}"> <img src="{% if post.writer.avatar %}{{post.writer.avatar.url}}{% else %}{% static 'images/avatar/ceod.jpg' %}{% endif %}" alt="{{post.writer.username}}" /><span>By {{post.writer.full_name|default:post.writer.username|upper}}</span> </a>
       </div>
       <ul class="post-opt">
-        <li><i class="far fa-comments-alt"></i> {{post.comments}}</li>
+        <li><i class="fas fa-comments"></i> {{post.comments}}</li>
         <li><i class="fal fa-eye"></i> {{post.views}}</li>
       </ul>
     </div>
@@ -57,10 +49,7 @@
 <!-- section end  -->
 <div class="breadcrumbs-section fl-wrap">
   <div class="container">
-    <div class="breadcrumbs-header_url">
-      <a href="{% url  'posts:home' %}">Home</a
-      ><span>{{post.title|upper}}</span>
-    </div>
+    <div class="breadcrumbs-header_url"><a href="{% url  'posts:home' %}">Home</a><span>{{post.title|upper}}</span></div>
     <div class="share-holder hor-share">
       <div class="share-title">Share:</div>
       {% include "shared/socialplatforms.html" %}
