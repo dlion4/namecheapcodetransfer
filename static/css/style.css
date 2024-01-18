@@ -1172,8 +1172,7 @@ section {
   height: 1px;
 }
 .sect_dec:after {
-  font-family: Font Awesome\5 Pro;
-  content: "\f0d7";
+  
   position: absolute;
   right: 20px;
   top: 30px;
@@ -1318,18 +1317,7 @@ section {
 .breadcrumbs-header_url span {
   padding-left: 14px;
 }
-.breadcrumbs-list a:before,
-.breadcrumbs-header_url a:before,
-.breadcrumbs-list span:before,
-.breadcrumbs-header_url span:before {
-  font-family: Font Awesome\5 Pro;
-  content: "\f0da";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 11px;
-  transition: all 200ms linear;
-}
+
 .scroll-down-wrap {
   position: absolute;
   right: 0;
@@ -1771,8 +1759,7 @@ section {
   font-weight: 600;
 }
 .footer-list li:before {
-  font-family: Font Awesome\5 Pro;
-  content: "\f0da";
+  
   position: absolute;
   left: 0;
   top: 5px;
@@ -3330,8 +3317,7 @@ section {
   color: #fff;
 }
 .categories_nav-inner .submen-dec:before {
-  font-family: Font Awesome\5 Pro;
-  content: "\f0da";
+  
   position: absolute;
   right: 20px;
   width: 10px;
@@ -5322,9 +5308,7 @@ h4.cart-title span {
     right: 18px;
     top: 12px;
   }
-  .menusb li i:before {
-    content: "\f0da";
-  }
+  
   .menusb a {
     float: left;
     width: 100%;
