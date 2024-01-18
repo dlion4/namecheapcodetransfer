@@ -8,11 +8,11 @@
         {% if nav_categories %}
         <ul>
           <li>
-            <a href="#" class="act-category"><i class="fal fa-rss"></i> All posts</a>
+            <a href="#" class="act-category"></i> All Posts</a>
           </li>
           {% for category in nav_categories %}
           <li>
-            <a href="#"><i class=""></i> {{category.name|upper}}</a>
+            <a href="#">{{category.name|upper}}</a>
 
             <!--level 2 -->
             {% if category.get_sub_categories %}

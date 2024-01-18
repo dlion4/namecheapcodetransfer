@@ -90,7 +90,6 @@
 #footer-twiit .timePosted a:before,
 #footer-twiit .interact a,
 .list-post-content .post-date i,
-
 .load-more_btn i,
 .breadcrumbs-header_url a:before,
 .nice-select:after,
@@ -117,13 +116,12 @@
 .spn_box:hover .spn-box-content_title,
 .spn-box-content_subtitle i,
 .pr-subtitle span,
-.box-widget-menu-btn,
+.box-widget--btn,
 .comment-meta i,
 .print-btn i,
 .pr-subtitle i,
 .hs_single-post .post-opt i,
 .hs_single-post .post-date i,
-
 .contact-social li a:hover,
 .contacts-list li span i,
 .reviews_counter_wrap .star-rating i,
